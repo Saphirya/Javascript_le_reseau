@@ -3,14 +3,14 @@ const user = {
   email: "tintin@gmail.com",
 };
 
-const promesse = fetch("https://jsonplaceholder.typicode.com/posts", {
+const promesse = fetch("https://jsonplaceholder.typicode.com/users", {
   method: "POST",
   body: JSON.stringify(user),
   headers: {
     "Content-Type": "application/json",
   },
+  integrity: "sha256-",
 });
-
 promesse.then(async (response) => {
   console.log(response);
   try {
